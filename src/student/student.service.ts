@@ -1,0 +1,18 @@
+import { Injectable } from '@nestjs/common';
+
+@Injectable()
+export class StudentService {
+     students=[];
+
+    getStudents(){
+        return this.students;
+    }
+
+    getSpecificStudent(index){
+        return this.students[index];
+    }
+    createStudent(student){
+        this.students.push(student)
+        return student;
+    }
+}
